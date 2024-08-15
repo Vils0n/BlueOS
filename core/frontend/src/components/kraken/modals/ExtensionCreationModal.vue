@@ -44,7 +44,15 @@
           />
 
           <v-textarea
+            v-if="is_editing"
             v-model="formatted_permissions"
+            label="Original Settings"
+            :disabled="is_editing"
+            :rules="[validate_permissions]"
+          />
+          <v-textarea
+            v-else
+            v-model="new_extension.permissions"
             label="Original Settings"
             :disabled="is_editing"
             :rules="[validate_permissions]"

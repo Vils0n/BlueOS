@@ -41,7 +41,7 @@ class Detector:
 
                 BME280_address = 0x76
                 bus.read_byte_data(BME280_address, 0)
-                
+
                 bus = SMBus(4)
                 PCA9685_address = 0x40
                 bus.read_byte_data(PCA9685_address, 0)

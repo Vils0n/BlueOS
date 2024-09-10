@@ -45,7 +45,8 @@ class Detector:
 
                 bus = SMBus(1)
                 BME280_address = 0x76
-                bus.read_byte_data(BME280_address, 0)
+                bus.read_byte_data(BME280_address, 0) 
+                
                 return True
             except Exception as error:
                 logger.warning(f"Navigator not detected: {error}")

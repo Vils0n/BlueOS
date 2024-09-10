@@ -29,7 +29,7 @@ class Detector:
             Optional[FlightController]: Return FlightController if connected, None otherwise.
         """
 
-              def is_navigator_r5_connected() -> bool:
+        def is_navigator_r5_connected() -> bool:
             try:
                 bus = SMBus(4)
                 PCA9685_address = 0x40
